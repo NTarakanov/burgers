@@ -743,7 +743,7 @@ svg {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 89px;
+  height: 89px;
   margin-bottom: 30px;
 }
 
