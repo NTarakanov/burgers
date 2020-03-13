@@ -1,0 +1,17 @@
+.cards-cooking {
+  text-align: center;
+  color: $black;
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    min-height: 89px;
+    margin-bottom: 30px;
+  }
+  &__title {
+    @include lifehack;
+    font-size: 24px;
+  }
+}
+
+

@@ -1,0 +1,17 @@
+.switch-controls {
+  display: flex;
+}
+
+.switch-controls__elem {
+  display: flex;
+  align-items: center;
+
+  &:first-child {
+    margin-right: 20px;
+  }
+}
+
+.switch-controls__radio,
+.switch-controls__checkbox {
+  margin-right: 10px;
+}

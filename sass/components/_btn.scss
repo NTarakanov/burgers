@@ -1,0 +1,13 @@
+.btn {
+  background: $red;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-size: 13px;
+  display: inline-block;
+  padding: 10px 15px;
+}
+
+.btn--review:hover {
+  background-color: #1f2122;
+}

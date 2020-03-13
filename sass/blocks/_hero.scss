@@ -1,0 +1,24 @@
+.hero {
+  background: url("../images/bg/bg_hero.png") center center / cover no-repeat;
+}
+
+.hero__content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 90px;
+}
+
+.hero__image,
+.hero__text {
+  flex-grow: 1;
+  flex-basis: 50%;
+}
+
+.hero__text {
+  padding-top: 95px;
+  font-size: 65px;
+  @include lifehack;
+  line-height: 1.1;
+  color: $white;
+  text-transform: lowercase;
+}
