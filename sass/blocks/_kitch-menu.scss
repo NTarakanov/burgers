@@ -1,3 +1,55 @@
 .kitch-menu {
+  position: relative;
   background: url("../images/bg/bg_kitchen.jpg") center center / cover no-repeat;
+  height: 100vh;
+}
+
+.kitch-menu__list {
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  // transform: rotate(-90deg);
+  height: 100%;
+}
+
+.kitch-menu__item {
+  display: flex;
+  color: $white;
+}
+
+.kitch-menu__title {
+  @include gagalin;
+  font-size: rem(40px);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  padding: rem(40px) rem(17px);
+  margin: rem(0px);
+}
+
+.kitch-menu__text {
+  overflow: hidden;
+  max-width: 0;
+  text-align: justify;
+}
+
+.kitch-menu__item--is-activ {
+  @include phons {
+    position: relative;
+  }
+  .kitch-menu__text {
+    max-width: rem(472px);
+    padding: rem(60px) rem(12px);
+    background-color: rgba(47, 50, 52, 0.92);
+
+    // @include phons {
+    //   position: absolute;
+    //   left: 0;
+    //   right: 0;
+    //   top:0;
+    //   bottom: 0;
+    //   width: auto;
+    // }
+  }
 }

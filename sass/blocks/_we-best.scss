@@ -7,9 +7,18 @@
 .we-best__list {
   display: flex;
   justify-content: space-around;
+
+  @include phons {
+    flex-direction: column;
+  }
 }
 
 .we-best__item {
   flex-basis: 33%;
   text-align: center;
+
+  @include phons {
+    display: flex;
+    margin-bottom: rem(50px);
+  }
 }

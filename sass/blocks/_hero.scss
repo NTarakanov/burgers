@@ -5,7 +5,12 @@
 .hero__content {
   display: flex;
   align-items: center;
-  margin-bottom: 90px;
+  margin-bottom: rem(90px);
+  
+  @include tablets {
+    flex-direction: column;
+    padding: 0 20%;
+  }
 }
 
 .hero__image,
@@ -15,10 +20,18 @@
 }
 
 .hero__text {
-  padding-top: 95px;
-  font-size: 65px;
+  padding-top: rem(95px);
+  font-size: rem(65px);
   @include lifehack;
   line-height: 1.1;
   color: $white;
   text-transform: lowercase;
+
+  @include tablets {
+    text-align: center;
+    padding-top: 0;
+  }
+  @include phons {
+    font-size: rem(54px);
+  }
 }

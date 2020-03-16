@@ -7,11 +7,11 @@
   align-items: center;
 
   &:first-child {
-    margin-right: 20px;
+    margin-right: rem(20px);
   }
 }
 
 .switch-controls__radio,
 .switch-controls__checkbox {
-  margin-right: 10px;
+  margin-right: rem(10px);
 }

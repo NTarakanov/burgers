@@ -6,8 +6,8 @@
 .scroll-down__btn {
     display: none;
     margin: 0 auto;
-    width: 29px;
-    height: 16px;
+    width: rem(29px);
+    height: rem(16px);
       
     &.in--activ {
       display: block;

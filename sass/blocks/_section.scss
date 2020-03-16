@@ -1,14 +1,25 @@
 .section {
-  min-height: 650px;
+  min-height: rem(650px);
+
+  @include tablets {
+    min-height: rem(1024px);
+  }
+  @include phons {
+    min-height: rem(800px);
+  }
 }
 
 .section__title {
-  font-size: 72px;
+  font-size: rem(72px);
   color: $yellow;
-  margin-bottom: 50px;
+  margin-bottom: rem(50px);
   @include gagalin;
   line-height: 1;
   text-transform: uppercase;
+
+  @include phons {
+    font-size: rem(63px);
+  }
 
   &--centered {
     text-align: center;
@@ -20,6 +31,6 @@
     color: $white;
   }
   &--padding--top {
-    padding-top: 110px;
+    padding-top: rem(110px);
   }
 }

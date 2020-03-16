@@ -1,13 +1,24 @@
 .btn {
   background: $red;
+  color: $white;
   text-decoration: none;
   text-transform: uppercase;
-  border-radius: 5px;
-  font-size: 13px;
+  border-radius: rem(5px);
+  font-size: rem(13px);
   display: inline-block;
-  padding: 10px 15px;
+  padding: rem(10px) rem(15px);
+  cursor: pointer;
+
+  &:focus{
+    outline: none;
+  }
 }
 
 .btn--review:hover {
   background-color: #1f2122;
+}
+
+.btn--reset {
+  text-transform: none;
+  background: transparent;
 }
