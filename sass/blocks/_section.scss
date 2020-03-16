@@ -1,6 +1,7 @@
 .section {
   min-height: 650px;
 }
+
 .section__title {
   font-size: 72px;
   color: $yellow;
@@ -8,10 +9,17 @@
   @include gagalin;
   line-height: 1;
   text-transform: uppercase;
-}
-.section__title--centered {
+
+  &--centered {
     text-align: center;
-}
-.section__title--color--black {
+  }
+  &--color--black {
     color: $black;
+  }
+  &--color--white {
+    color: $white;
+  }
+  &--padding--top {
+    padding-top: 110px;
+  }
 }
