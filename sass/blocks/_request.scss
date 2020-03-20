@@ -23,6 +23,9 @@
     max-width: 470px;
     align-self: center;
     
+    @include phons {
+      width: 100%;
+    }
     &:first-child {
       margin-right: 0;
     }
@@ -32,6 +35,9 @@
 .request__row {
   margin-bottom: rem(14px);
   display: flex;
+  @include phons {
+    justify-content: center;
+  }
 }
 
 .request__block {

@@ -1,6 +1,12 @@
 .scroll-down {
-  flex-grow: 1;
-  flex-basis: 100%;
+  position: absolute;
+  bottom: rem(40px);
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include phons {
+    bottom: rem(30px);
+  }
 }
 
 .scroll-down__btn {

@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Document</title>
+    <title>Главная страница</title>
   </head>
   <body>
-    <!-- С дома -->
     <div class="wrapper">
       <div class="wrapper__content">
         <section class="section hero">
@@ -50,6 +49,13 @@
                     </li>
                   </ul>
                 </nav>
+                <div class="burger-menu">
+                  <input type="checkbox" id="formenu" class="burger-menu__checkbox">
+                  <label for="formenu" class="burger-menu__btn">
+                    <div class="burger-menu__icon"></div>
+                  </label>
+                </div>
+                
               </div>
               <div class="header__col">
                 <div class="order">
@@ -692,5 +698,38 @@
         </section>
       </div>
     </div>
+    <script>
+      const menuBtm = document.querySelector('.burger-menu__checkbox');
+      const menuList = document.querySelector('.menu');
+      const menuBody = document.querySelector('body');
+      
+      menuBtm.addEventListener('click', function (event) {
+        // console.log(menuBtm.srcElement.checked);
+        if (event.srcElement.checked == true){
+          menuList.style.display = 'flex';
+          menuBody.style.overflow = 'hidden';
+        } else {
+          menuList.style.display = '';
+          menuBody.style.overflow = '';
+        }
+      });
+
+      const teamAcco = document.querySelectorAll('.team__accordion');
+      
+      // for (let i = 0; i < teamAcco.length; i++){
+        
+      //   teamAcco[i].addEventListener('click', function (event){
+      //     this.classList.toggle('team__accordion--is-activ');
+      //     event.preventDefault();
+      //   });
+      // }
+      teamAcco.forEach(function(entery){
+        console.log(entery);
+        entery.addEventListener('click', function(klk){
+          klk.preventDefault();
+          this.classList.toggle('team__accordion--is-activ');
+        });        
+      });
+    </script>
   </body>
 </html>

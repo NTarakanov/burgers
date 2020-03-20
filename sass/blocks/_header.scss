@@ -1,11 +1,21 @@
 .header {
     display: flex;
     align-items: center;
+    width: 100%;
     min-height: rem(90px);
     color: $white;
 }
 .header__col {
     &:nth-child(2) {
-        margin-left: auto;
+        flex: 1;
+        @include tablets {
+            flex: 0;
+            order: 1;
+        }
+    }
+    &:last-child {
+        @include tablets {
+            margin-left: auto;
+        }
     }
 }
