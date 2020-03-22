@@ -646,11 +646,7 @@ svg {
 }
 
 .section__title--padding--top {
-<<<<<<< HEAD
-  padding-top: 110px;
-=======
   padding-top: 6.875rem;
->>>>>>> b074e12528dbabd2d621d36eb60b1cc76ed03d94
 }
 
 .scroll-down {
@@ -670,13 +666,8 @@ svg {
 .scroll-down__btn {
   display: none;
   margin: 0 auto;
-<<<<<<< HEAD
-  width: 29px;
-  height: 16px;
-=======
   width: 1.8125rem;
   height: 1rem;
->>>>>>> b074e12528dbabd2d621d36eb60b1cc76ed03d94
 }
 
 .scroll-down__btn.in--activ {
@@ -1017,8 +1008,6 @@ svg {
   text-align: center;
 }
 
-<<<<<<< HEAD
-=======
 @media screen and (max-width: 480px) {
   .we-best__item {
     display: -webkit-box;
@@ -1028,7 +1017,6 @@ svg {
   }
 }
 
->>>>>>> b074e12528dbabd2d621d36eb60b1cc76ed03d94
 .team {
   position: relative;
   background: url(../images/bg/bg_teams.jpg) center center/cover no-repeat;
@@ -1053,14 +1041,6 @@ svg {
   background-color: rgba(47, 50, 52, 0.92);
 }
 
-<<<<<<< HEAD
-.team__item {
-  margin-bottom: 40px;
-}
-
-.team__col {
-  margin-left: 20px;
-=======
 @media screen and (max-width: 768px) {
   .team__container {
     left: 0;
@@ -1074,7 +1054,6 @@ svg {
 
 .team__col {
   margin-left: 1.25rem;
->>>>>>> b074e12528dbabd2d621d36eb60b1cc76ed03d94
 }
 
 .team__accordion .team__content {
@@ -1084,11 +1063,7 @@ svg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-<<<<<<< HEAD
-  min-height: 100px;
-=======
   min-height: 6.25rem;
->>>>>>> b074e12528dbabd2d621d36eb60b1cc76ed03d94
   color: #ffffff;
 }
 
@@ -1105,15 +1080,9 @@ svg {
 .team__accordion .team__user:before {
   content: "";
   display: inline-block;
-<<<<<<< HEAD
-  margin-right: 10px;
-  width: 9px;
-  height: 6px;
-=======
   margin-right: 0.625rem;
   width: 0.5625rem;
   height: 0.375rem;
->>>>>>> b074e12528dbabd2d621d36eb60b1cc76ed03d94
   background: url(../images/icon/svg/accordion_icon.svg);
   background-size: cover;
 }
@@ -1124,8 +1093,6 @@ svg {
   display: flex;
 }
 
-<<<<<<< HEAD
-=======
 @media screen and (max-width: 768px) {
   .team__accordion--is-activ .team__content {
     -webkit-box-orient: vertical;
@@ -1135,7 +1102,6 @@ svg {
   }
 }
 
->>>>>>> b074e12528dbabd2d621d36eb60b1cc76ed03d94
 .team__accordion--is-activ .team__user {
   color: #f9b43b;
 }
@@ -1145,11 +1111,7 @@ svg {
 }
 
 .team__image {
-<<<<<<< HEAD
-  width: 100px;
-=======
   width: 6.25rem;
->>>>>>> b074e12528dbabd2d621d36eb60b1cc76ed03d94
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1164,13 +1126,6 @@ svg {
 }
 
 .team__text {
-<<<<<<< HEAD
-  max-width: 210px;
-}
-
-.kitch-menu {
-  background: url("../images/bg/bg_kitchen.jpg") center center/cover no-repeat;
-=======
   max-width: 13.125rem;
 }
 
@@ -1226,7 +1181,6 @@ svg {
   max-width: 29.5rem;
   padding: 3.75rem 0.75rem;
   background-color: rgba(47, 50, 52, 0.92);
->>>>>>> b074e12528dbabd2d621d36eb60b1cc76ed03d94
 }
 
 .cards-cooking {

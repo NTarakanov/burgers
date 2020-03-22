@@ -12,13 +12,8 @@
 .scroll-down__btn {
     display: none;
     margin: 0 auto;
-<<<<<<< HEAD
-    width: 29px;
-    height: 16px;
-=======
     width: rem(29px);
     height: rem(16px);
->>>>>>> b074e12528dbabd2d621d36eb60b1cc76ed03d94
       
     &.in--activ {
       display: block;

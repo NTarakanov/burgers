@@ -14,30 +14,16 @@
   bottom: 0;
   height: 100%;
   background-color: rgba(47, 50, 52, 0.92);
-<<<<<<< HEAD
-=======
 
   @include tablets {
     left: 0;
     text-align: center;
   }
->>>>>>> b074e12528dbabd2d621d36eb60b1cc76ed03d94
 }
 
 // .container--team {
 //   display: flex;
 //   flex-direction: column;
-<<<<<<< HEAD
-//   max-width: 470px;
-// }
-
-.team__item {
-  margin-bottom: 40px;
-}
-
-.team__col{
-  margin-left: 20px;
-=======
 //   max-width: rem(470px);
 // }
 
@@ -47,18 +33,13 @@
 
 .team__col {
   margin-left: rem(20px);
->>>>>>> b074e12528dbabd2d621d36eb60b1cc76ed03d94
 }
 
 .team__accordion {
   .team__content {
     display: flex;
     align-items: center;
-<<<<<<< HEAD
-    min-height: 100px;
-=======
     min-height: rem(100px);
->>>>>>> b074e12528dbabd2d621d36eb60b1cc76ed03d94
     color: $white;
   }
   .team__content {
@@ -71,15 +52,9 @@
     &:before {
       content: "";
       display: inline-block;
-<<<<<<< HEAD
-      margin-right: 10px;
-      width: 9px;
-      height: 6px;
-=======
       margin-right: rem(10px);
       width: rem(9px);
       height: rem(6px);
->>>>>>> b074e12528dbabd2d621d36eb60b1cc76ed03d94
       background: url(../images/icon/svg/accordion_icon.svg);
       background-size: cover;
     }
@@ -87,13 +62,10 @@
   &--is-activ {
     .team__content {
       display: flex;
-<<<<<<< HEAD
-=======
 
       @include tablets {
         flex-direction: column;
       }
->>>>>>> b074e12528dbabd2d621d36eb60b1cc76ed03d94
     }
     .team__user {
       color: $yellow;
@@ -106,11 +78,7 @@
 }
 
 .team__image {
-<<<<<<< HEAD
-  width: 100px;
-=======
   width: rem(100px);
->>>>>>> b074e12528dbabd2d621d36eb60b1cc76ed03d94
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -119,9 +87,5 @@
 }
 
 .team__text {
-<<<<<<< HEAD
-  max-width: 210px;
-=======
   max-width: rem(210px);
->>>>>>> b074e12528dbabd2d621d36eb60b1cc76ed03d94
 }
