@@ -1,15 +1,30 @@
 .section {
-  min-height: 650px;
+  min-height: rem(650px);
+  height: 100vh;
+
+  @include tablets {
+    min-height: rem(1024px);
+  }
+  @include phons {
+    min-height: rem(800px);
+  }
 }
 
 .section__title {
-  font-size: 72px;
+  font-size: rem(72px);
   color: $yellow;
-  margin-bottom: 50px;
+  margin-bottom: rem(50px);
   @include gagalin;
   line-height: 1;
   text-transform: uppercase;
 
+<<<<<<< HEAD
+=======
+  @include phons {
+    font-size: rem(63px);
+  }
+
+>>>>>>> b074e12528dbabd2d621d36eb60b1cc76ed03d94
   &--centered {
     text-align: center;
   }
@@ -20,6 +35,10 @@
     color: $white;
   }
   &--padding--top {
+<<<<<<< HEAD
     padding-top: 110px;
+=======
+    padding-top: rem(110px);
+>>>>>>> b074e12528dbabd2d621d36eb60b1cc76ed03d94
   }
 }

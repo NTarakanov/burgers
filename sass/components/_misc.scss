@@ -4,3 +4,19 @@ $yellow: #f9b43b;
 $black: #2f3234;
 $red: #e35028;
 $white: #ffffff;
+
+@function rem($px) {
+  @return $px / 16px + 0rem;
+}
+
+@mixin tablets {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin phons {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}

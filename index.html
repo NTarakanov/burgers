@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Document</title>
+    <title>Главная страница</title>
   </head>
   <body>
     <!-- С дома -->
@@ -50,6 +50,13 @@
                     </li>
                   </ul>
                 </nav>
+                <div class="burger-menu">
+                  <input type="checkbox" id="formenu" class="burger-menu__checkbox">
+                  <label for="formenu" class="burger-menu__btn">
+                    <div class="burger-menu__icon"></div>
+                  </label>
+                </div>
+                
               </div>
               <div class="header__col">
                 <div class="order">
@@ -304,7 +311,11 @@
                 </div>
               </li>
 
+<<<<<<< HEAD
               <li class="kitch-menu__item kitch-menu__item--is-activ">
+=======
+              <li class="kitch-menu__item">
+>>>>>>> b074e12528dbabd2d621d36eb60b1cc76ed03d94
                 <h3 class="kitch-menu__title">Вегетарианское</h3>
                 <div class="kitch-menu__text">
                   Речевой акт редуцирует диалектический характер. Развивая эту
@@ -321,7 +332,11 @@
                 </div>
               </li>
 
+<<<<<<< HEAD
               <li class="kitch-menu__item kitch-menu__item--is-activ">
+=======
+              <li class="kitch-menu__item">
+>>>>>>> b074e12528dbabd2d621d36eb60b1cc76ed03d94
                 <h3 class="kitch-menu__title">Диетическое</h3>
                 <div class="kitch-menu__text">
                   Речевой акт редуцирует диалектический характер. Развивая эту
@@ -629,14 +644,101 @@
 
                 <div class="request__row">
                   <div class="request__buttons">
-                    <button tupe="submit" class="btn">Отправить</button>
+                    <button tupe="submit" class="btn" type="submit">Отправить</button>                    
+                    <button tupe="submit" class="btn btn--reset" type="reset">Очистить</button>
                   </div>
                 </div>
               </div>
             </form>
           </div>
         </section>
+        <section class="section map">
+          
+          <footer class="footer">
+            <div class="container footer__container">
+              <div class="footer__col">
+                <address class="footer__address">
+                  Санкт-Петербург, ул.Бабушкина, д.12/1, 15
+                </address>
+                <a class="footer__phone" href="tel:+78123771377">+7 (812) 377-13-77</a>
+              </div>
+              <div class="footer__col">
+                <ul class="socials">
+                  <li class="socials__item">
+                    <a class="socials__link" href="#">
+                      <svg class="social__icon">
+                        <use
+                        xlink:href="./images/icon/svg/spritesvg.svg#vk"
+                      ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials__item">
+                    <a class="socials__link" href="#">
+                      <svg class="social__icon">
+                        <use
+                        xlink:href="./images/icon/svg/spritesvg.svg#fb"
+                      ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials__item">
+                    <a class="socials__link" href="#">
+                      <svg class="social__icon">
+                        <use
+                        xlink:href="./images/icon/svg/spritesvg.svg#inst"
+                      ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials__item">
+                    <a class="socials__link" href="#">
+                      <svg class="social__icon">
+                        <use
+                        xlink:href="./images/icon/svg/spritesvg.svg#tw"
+                      ></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </footer>
+        </section>
       </div>
     </div>
+    <script>
+      const menuBtm = document.querySelector('.burger-menu__checkbox');
+      const menuList = document.querySelector('.menu');
+      const menuBody = document.querySelector('body');
+      
+      menuBtm.addEventListener('click', function (event) {
+        // console.log(menuBtm.srcElement.checked);
+        if (event.srcElement.checked == true){
+          menuList.style.display = 'flex';
+          menuBody.style.overflow = 'hidden';
+        } else {
+          menuList.style.display = '';
+          menuBody.style.overflow = '';
+        }
+      });
+
+      const teamAcco = document.querySelectorAll('.team__accordion');
+      
+      // for (let i = 0; i < teamAcco.length; i++){
+        
+      //   teamAcco[i].addEventListener('click', function (event){
+      //     this.classList.toggle('team__accordion--is-activ');
+      //     event.preventDefault();
+      //   });
+      // }
+      teamAcco.forEach(function(entery){
+        console.log(entery);
+        entery.addEventListener('click', function(klk){
+          klk.preventDefault();
+          this.classList.toggle('team__accordion--is-activ');
+        });        
+      });
+    </script>
   </body>
 </html>

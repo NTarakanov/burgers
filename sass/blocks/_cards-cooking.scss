@@ -2,15 +2,28 @@
   text-align: center;
   color: $black;
 
+  @include phons {
+    text-align: left;
+  }
+
   &__image {
     display: flex;
     justify-content: center;
-    height: 89px;
-    margin-bottom: 30px;
+    height: rem(89px);
+    margin-bottom: rem(30px);
+
+    @include phons {
+      flex: 1;
+    }
+  }
+  &__content {
+    @include phons {
+      flex: 2;
+    }
   }
   &__title {
     @include lifehack;
-    font-size: 24px;
+    font-size: rem(24px);
   }
 }
 
