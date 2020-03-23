@@ -1049,6 +1049,13 @@ svg {
   top: 50%;
 }
 
+.slider-burger__list {
+  overflow: hidden;
+  /* display: flex; */
+  display: -webkit-box;
+  width: 100%;
+}
+
 .slider-burger__item {
   display: -webkit-box;
   display: -ms-flexbox;

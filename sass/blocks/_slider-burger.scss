@@ -25,6 +25,13 @@
   }
 }
 
+.slider-burger__list {
+  overflow: hidden;
+  /* display: flex; */
+  display: -webkit-box;
+  width: 100%;
+}
+
 .slider-burger__item {
   display: flex;
 }
@@ -51,6 +58,6 @@
   font-size: rem(72px);
   margin-right: rem(15px);
 }
-.slider-burger__currency{
-    font-size: rem(30px);
+.slider-burger__currency {
+  font-size: rem(30px);
 }
