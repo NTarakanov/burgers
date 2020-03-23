@@ -1,0 +1,30 @@
+.composition {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: rem(90px);
+  height: rem(90px);
+  border-radius: rem(5px);
+  background-color: $red;
+
+  &__list {
+    display: none;
+  }
+  //   &__content {
+  //     display: flex;
+  //     flex-direction: column;
+  //     justify-content: center;
+  //     align-items: center;
+  //   }
+  &__image {
+    width: rem(46px);
+    height: rem(46px);
+    fill: $white;
+  }
+  &__text {
+    @include gagalin;
+    font-size: rem(14px);
+    color: $white;
+  }
+}

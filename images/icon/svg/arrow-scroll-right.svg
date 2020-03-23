@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 30" width="17" height="30">
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: none;stroke: #ffffff;stroke-width: 2 } 
+	</style>
+	<g id="burgers">
+		<path id="arrow-scroll" class="shp0" d="M3.01 1.99L14.77 12.63C16.4 14.21 16.4 16.77 14.77 18.36L3.01 28.99" />
+	</g>
+</svg>
