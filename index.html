@@ -1117,36 +1117,27 @@
             isActiv = 0;
           } else {
             isActiv = item;
-          }
-          
-          console.log(item);
+          }          
         });
       });
-      // const teamActiv = document.querySelectorAll(".team__accordion--is-activ");
-
-      // for (let i = 0; i < teamAcco.length; i++){
-
-      //   teamAcco[i].addEventListener('click', function (event){
-      //     event.preventDefault();
-      //     if(this.classList.contains('team__accordion--is-activ')){
-      //       for (let i = 0; i < teamActiv.length; i++){
-      //         teamAcco[i].addEventListener('click', function (event){
-      //           this.classList.remove('team__accordion--is-activ');
-      //         });
-      //       };
-                     
-      //     } else {
-      //       this.classList.add('team__accordion--is-activ');
-      //     };          
-      //   });
-      // }
-      // teamAcco.forEach(function(entery) {
-      //   // console.log(entery);
-      //   entery.addEventListener("click", function(klk) {
-      //     klk.preventDefault();
-      //     this.classList.toggle("team__accordion--is-activ");
-      //   });
-      // });
+      
+      //Аккордион для kitch-menu
+      const kitchAcco = document.querySelectorAll('.kitch-menu__item');
+      
+      kitchAcco.forEach(function(item, kitchAcco) {
+        item.addEventListener('click', function(e) {
+          e.preventDefault();
+          this.classList.add('kitch-menu__item--is-activ');
+          if (isActiv) {
+            isActiv.classList.remove('kitch-menu__item--is-activ');
+          }
+          if (isActiv === this) {
+            isActiv = 0;
+          } else {
+            isActiv = this;
+          }
+        });
+      });
     </script>
   </body>
 </html>
