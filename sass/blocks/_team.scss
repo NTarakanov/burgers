@@ -39,11 +39,9 @@
   .team__content {
     display: flex;
     align-items: center;
-    min-height: rem(100px);
     color: $white;
-  }
-  .team__content {
-    display: none;
+    opacity: 0;
+    height: 0;
   }
   .team__user {
     @include ubuntu(bold);
@@ -61,10 +59,12 @@
   }
   &--is-activ {
     .team__content {
-      display: flex;
+      opacity: 1;
+      min-height: rem(100px);
 
       @include tablets {
         flex-direction: column;
+        min-height: rem(180px);
       }
     }
     .team__user {

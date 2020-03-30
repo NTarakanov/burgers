@@ -19,7 +19,7 @@
   text-transform: uppercase;
 
   @include phons {
-    font-size: rem(63px);
+    font-size: rem(50px);
   }
 
   &--centered {
@@ -34,4 +34,10 @@
   &--padding--top {
     padding-top: rem(110px);
   }
+  &--position{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+  }
 }
+
