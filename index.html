@@ -1161,6 +1161,7 @@
             mobileMenu.classList.add('mobile__kitch-menu');
             console.log(mobileMenu);
             mobileMenu.innerHTML = this.innerHTML;
+            mobileSection.append(mobileMenu);
 
             mobileMenu.addEventListener('click', function(e){
               e.preventDefault();
