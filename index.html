@@ -1234,7 +1234,8 @@
           const data = {
             name:     myForm.elements.name.value,
             phone:    myForm.elements.phone.value,
-            comment:  myForm.elements.comment.value
+            comment:  myForm.elements.comment.value,
+            to:       'ntarakanov@mail.ru'
           }
           const xhr = new XMLHttpRequest();
           xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
