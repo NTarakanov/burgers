@@ -915,7 +915,7 @@
             <h2 class="section__title section__title--centered">
               Закажите доставку
             </h2>
-            <form class="request">
+            <form class="request" id="myForm">
               <div class="request__col">
                 <div class="request__row">
                   <label class="request__block">
@@ -925,16 +925,20 @@
                       class="request__input"
                       name="name"
                       placeholder=""
+                      required
                     />
+                    <div class="error"></div>
                   </label>
                   <label class="request__block">
                     <div class="request__title">Телефон</div>
                     <input
-                      type="text"
+                      type="number"
                       class="request__input"
                       name="phone"
                       placeholder=""
+                      required
                     />
+                    <div class="error"></div>
                   </label>
                 </div>
 
@@ -946,7 +950,9 @@
                       class="request__input"
                       name="street"
                       placeholder=""
+                      required
                     />
+                    <div class="error"></div>
                   </label>
                 </div>
 
@@ -954,11 +960,13 @@
                   <label class="request__block">
                     <div class="request__title">Дом</div>
                     <input
-                      type="text"
+                      type="number"
                       class="request__input"
                       name="home"
                       placeholder=""
+                      required
                     />
+                    <div class="error"></div>
                   </label>
                   <label class="request__block">
                     <div class="request__title">Корпус</div>
@@ -996,7 +1004,8 @@
                     <div class="request__title">Комментарий</div>
                     <textarea
                       type="text"
-                      class="request__input request__input--textarea" name="comment"
+                      class="request__input request__input--textarea"
+                      name="comment"
                     ></textarea>
                   </label>
                 </div>
@@ -1042,7 +1051,12 @@
 
                 <div class="request__row">
                   <div class="request__buttons">
-                    <button tupe="submit" class="btn" type="submit">
+                    <button
+                      tupe="submit"
+                      id="sendBtn"
+                      class="btn"
+                      type="submit"
+                    >
                       Отправить
                     </button>
                     <button tupe="submit" class="btn btn--reset" type="reset">
@@ -1051,6 +1065,8 @@
                   </div>
                 </div>
               </div>
+
+              
             </form>
           </div>
         </section>
@@ -1205,6 +1221,50 @@
           }
         });
       });
+
+      //Работа с формой
+
+      const myForm = document.querySelector("#myForm");
+      const send = document.querySelector("#sendBtn");
+
+      send.addEventListener("click", event => {
+        event.preventDefault();
+
+        if (validateForm(myForm)) {
+          const data = {
+            name:     myForm.elements.name.value,
+            phone:    myForm.elements.phone.value,
+            comment:  myForm.elements.comment.value
+          }
+          const xhr = new XMLHttpRequest();
+          xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+          xhr.send(JSON.stringify(data));
+        }
+      });
+
+      function validateForm(form) {
+        let valid = true;
+
+        if (!validateField(form.elements.name)) {
+          valid = false;
+        }
+        if (!validateField(form.elements.phone)) {
+          valid = false;
+        }
+        if (!validateField(form.elements.street)) {
+          valid = false;
+        }
+        if (!validateField(form.elements.home)) {
+          valid = false;
+        }
+
+        return valid;
+      }
+
+      function validateField(field) {
+        field.nextElementSibling.textContent = field.validationMessage;
+        return field.checkValidity(); 
+      }
     </script>
   </body>
 </html>
