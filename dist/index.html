@@ -524,7 +524,7 @@
                       <div class="team__col">
                         <div class="team__image">
                           <img
-                            src="./images/team/aphex.jpg"
+                            src="./images/aphex.jpg"
                             alt="Дэниэл редклиф"
                             class="team__user-phot"
                           />
@@ -554,7 +554,7 @@
                       <div class="team__col">
                         <div class="team__image">
                           <img
-                            src="./images/team/aphex.jpg"
+                            src="./images/aphex.jpg"
                             alt="Дэниэл редклиф"
                             class="team__user-phot"
                           />
@@ -582,7 +582,7 @@
                       <div class="team__col">
                         <div class="team__image">
                           <img
-                            src="./images/team/aphex.jpg"
+                            src="./images/aphex.jpg"
                             alt="Дэниэл редклиф"
                             class="team__user-phot"
                           />
@@ -610,7 +610,7 @@
                       <div class="team__col">
                         <div class="team__image">
                           <img
-                            src="./images/team/aphex.jpg"
+                            src="./images/aphex.jpg"
                             alt="Дэниэл редклиф"
                             class="team__user-phot"
                           />
@@ -1134,168 +1134,7 @@
       </div>
     </div>
     <script src="https://www.youtube.com/iframe_api"></script>
-
-    <script
-      src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"
-      type="text/javascript"
-    ></script>
-
-    <script>
-      let myMap;
-
-      const init = () => {
-        myMap = new ymaps.Map("map", {
-          center: [53.051717, 158.661847],
-          zoom: 16,
-          controls: [],
-        });
-
-        const coord = [
-          [53.051717, 158.661847],
-          [53.07874, 158.652981],
-          [53.059857, 158.625618],
-          [53.054017, 158.609098],
-        ];
-
-        const myCollection = new ymaps.GeoObjectCollection(
-          {},
-          {
-            draggable: false,
-            iconLayout: "default#image",
-            iconImageHref: "./images/icons/map-marker.svg",
-            iconImageSize: [75, 135],
-            iconImageOffset: [-35, -125],
-          }
-        );
-
-        coord.forEach((coord) => {
-          myCollection.add(new ymaps.Placemark(coord));
-        });
-
-        myMap.geoObjects.add(myCollection);
-
-        myMap.behaviors.disable("scrollZoom");
-        console.log(myMap.behaviors);
-      };
-
-      ymaps.ready(init);
-    </script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"></script>
     <script src="js/main.min.js" type="text/javascript"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script>
-      let player;
-      const playerContainer = $(".player");
-
-      let eventsInit = () => {
-        $(".player__start").click((e) => {
-          e.preventDefault();
-          console.log(e);
-
-          if (playerContainer.hasClass("paused")) {
-            player.pauseVideo();
-          } else {
-            player.playVideo();
-          }
-        });
-
-        $(".player__playback").click((e) => {
-          const bar = $(e.currentTarget);
-          const clickPosit = e.originalEvent.layerX;
-          const buttonPositPercent = (clickPosit / bar.width()) * 100;
-          const playbackPositSec =
-            (player.getDuration() / 100) * buttonPositPercent;
-
-          $(".player__playback-button").css({
-            left: `${buttonPositPercent}%`,
-          });
-
-          player.seekTo(playbackPositSec);
-        });
-
-        $(".player__splash").click((e) => {
-          player.playVideo();
-        });
-      };
-
-      const formatTime = (timeSec) => {
-        const roundTime = Math.round(timeSec);
-        const minutes = addZero(Math.round(roundTime / 60));
-        const seconds = addZero(roundTime - minutes * 60);
-
-        function addZero(num) {
-          return num < 10 ? `0${num}` : num;
-        }
-
-        return `${minutes} : ${seconds}`;
-      };
-
-      const onPlayerReady = () => {
-        let interval;
-        const durationSec = player.getDuration();
-
-        $(".player__duration-estimate").text(formatTime(durationSec));
-
-        if (typeof interval !== "undefined") {
-          clearInterval(interval);
-        }
-
-        interval = setInterval(() => {
-          const completedSec = player.getCurrentTime();
-          const completedPercent = (completedSec / durationSec) * 100;
-
-          $(".player__playback-button").css({
-            left: `${completedPercent}%`,
-          });
-
-          $(".player__duration-completed").text(formatTime(completedSec));
-        }, 1000);
-      };
-
-      const onPlayerStateChange = (event) => {
-        /*
-        -1 (воспроизведение видео не начато)
-        0 (воспроизведение видео завершено)
-        1 (воспроизведение)
-        2 (пауза)
-        3 (буферизация)
-        5 (видео подают реплики).
-        */
-        switch (event.data) {
-          case 1:
-            playerContainer.addClass("active");
-            playerContainer.addClass("paused");
-            break;
-
-          case 2:
-            playerContainer.removeClass("active");
-            playerContainer.removeClass("paused");
-            break;
-        }
-      };
-
-      function onYouTubeIframeAPIReady() {
-        player = new YT.Player("yt-player", {
-          height: "370",
-          width: "660",
-          videoId: "Bj_AXOItZco",
-          events: {
-            onReady: onPlayerReady,
-            onStateChange: onPlayerStateChange,
-          },
-          playerVars: {
-            controls: 0,
-            disablekb: 0,
-            showinfo: 0,
-            rel: 0,
-            modestbranding: 0,
-            autoplay: 0,
-          },
-        });
-      }
-      eventsInit();
-
-      //
-      
-    </script>
   </body>
 </html>
