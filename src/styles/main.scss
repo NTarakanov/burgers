@@ -4,7 +4,9 @@ $black: #2f3234;
 $red: #e35028;
 $white: #ffffff;
 
-
+@function rem($px) {
+  @return $px / 16px + 0rem;
+}
 
 @import "./components/*.scss";
 @import "./layout/*.scss";
