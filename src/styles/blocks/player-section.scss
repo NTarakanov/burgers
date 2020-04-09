@@ -1,0 +1,15 @@
+.player-section {
+  display: flex;
+  align-items: center;
+  background: url("../images/bg_player.jpg") center center / cover no-repeat;
+  flex-direction: column;
+  justify-content: center;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: rem(405px);
+    width: rem(660px);
+  }
+}

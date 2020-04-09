@@ -1,0 +1,21 @@
+.reviews {
+  background: black;
+  height: 100vh;
+  // min-height: 650px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+  }
+  &__item {
+    overflow: hidden;
+    width: 25%;
+    height: 50%;
+
+    @include tablets {
+      width: 50%;
+      height: 25%;
+    }
+  }
+}

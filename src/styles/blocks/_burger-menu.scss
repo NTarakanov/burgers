@@ -1,0 +1,90 @@
+.burger-menu {
+  display: none;  
+  position: relative;  
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 rem(16px);
+  // top: 35px;
+  // left: 0px;
+  // right: 0px;
+  z-index: 9999999;
+
+  @include tablets{
+    display: flex;
+  }
+
+  &__btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(35px);
+    height: rem(30px);
+    cursor: pointer;
+    transition: 0.4s;
+  }
+
+  &__icon {
+    display: block;
+    position: relative;
+    background: rgba(255, 255, 255, 1);
+    width: 90%;
+    height: rem(4px);
+    transition: 0.4s;
+
+    &::after,
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      background: rgba(255, 255, 255, 1);
+      width: 100%;
+      height: rem(4px);
+      transition: 0.4s;
+    }
+    &::after {
+      top: rem(8px);
+    }
+    &::before {
+      top: rem(-8px);
+    }
+  }
+  &__checkbox {
+    display: none;
+
+    &:checked ~ {
+      .burger-menu {
+        &__nav {
+          opacity: 1;
+          transition-delay: 0s;
+        }
+
+        &__container {
+          height: 100%;
+          transition-delay: 0s;
+        }
+
+        &__btn {
+          .burger-menu__icon {
+            background: transparent;
+
+            &::before,
+            &::after {
+              top: 0px;
+            }
+
+            &::after {
+              transform: rotate(-45deg);
+              -webkit-transform: rotate(-45deg);
+            }
+
+            &::before {
+              transform: rotate(45deg);
+              -webkit-transform: rotate(45deg);
+            }
+          }
+        }
+      }
+    }
+  }
+}
