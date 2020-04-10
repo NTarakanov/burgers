@@ -17,6 +17,7 @@ body {
   &__content {
     height: 100%;
     transform: translateY(0%);
+    transition: all 1s;
   }
 }
 
