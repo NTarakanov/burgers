@@ -1156,9 +1156,12 @@
           display.css({
             transform: `translateY(${position}%)`,
           });
-          setTimeout(() => {
-            inScroll = false;
-          }, 1300);
+          display.on(
+            "transitionend webkitTransitionEnd oTransitionEnd",
+            function () {
+              inScroll = false;
+            }
+          );
         }
       };
 
